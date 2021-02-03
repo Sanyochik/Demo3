@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 24 2020 г., 15:19
--- Версия сервера: 10.3.13-MariaDB
--- Версия PHP: 7.2.10
+-- Время создания: Фев 03 2021 г., 15:24
+-- Версия сервера: 10.3.22-MariaDB
+-- Версия PHP: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -235,7 +234,7 @@ CREATE TABLE `temi` (
   `id_sozd` int(11) NOT NULL,
   `id_stati` int(11) NOT NULL,
   `text` text NOT NULL,
-  `data` datetime(6) NOT NULL
+  `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -243,7 +242,7 @@ CREATE TABLE `temi` (
 --
 
 INSERT INTO `temi` (`id`, `name`, `id_sozd`, `id_stati`, `text`, `data`) VALUES
-(1, 'Kryt', 1, 1, 'Hello world', '2020-12-24 00:00:00.000000');
+(2, 'Hi', 1, 1, 'Hello', '2021-02-03');
 
 -- --------------------------------------------------------
 
@@ -499,7 +498,7 @@ ALTER TABLE `street`
 -- AUTO_INCREMENT для таблицы `temi`
 --
 ALTER TABLE `temi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `user`

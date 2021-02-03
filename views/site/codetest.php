@@ -1,1 +1,1 @@
-<?= "hello" ?>
+<?php echho "hello" ?>

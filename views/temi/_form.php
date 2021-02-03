@@ -18,12 +18,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_stati')->radioList([
     '1' => 'Сделать тему закротой',
-    '2' => 'Сделать тему открытой',
 	])->label('')?>
 
     <?= $form->field($model, 'text')->textarea(['rows' => 6, 'placeholder' => 'Введите информацию о теме'])->label('Содержание темы') ?>
 
-    <?= $form->field($model, 'data')->textInput(['maxlength' => true, 'placeholder' => 'Введите дату создания'])->label('Дата выхода') ?>
+    <?= $form->field($model, 'data')->input('date')->label('Дата выхода') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
