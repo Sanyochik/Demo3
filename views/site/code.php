@@ -12,7 +12,11 @@ use \yii\widgets\ActiveForm;
                         <?php
                           $form = ActiveForm::begin(['class'=>'form-horizontal']);  
                         ?>
-                          <textarea rows="200" cols="200" class="form-control" name="name" placeholder="Введите ваш код сюда" aria-describedby="messageHelp" style="margin-top: 0px; margin-bottom: 0px; height: 335px;"><?= $_SESSION['name'];?></textarea>
+                          <textarea rows="200" cols="200" class="form-control" name="name" placeholder="Введите ваш код сюда" aria-describedby="messageHelp" style="margin-top: 0px; margin-bottom: 0px; height: 335px;"><?php if(isset($_SESSION['name'])){
+							  echo $_SESSION['name'];
+							  }else{
+								  echo "";
+							  };?></textarea>
                           <div>
 							<button type="submit" class="btn btn-secondary btn-lg">Проверить</button>
                           </div>
