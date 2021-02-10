@@ -35,6 +35,7 @@ AppAsset::register($this);
                 <a class="nav-link" href="/web/index.php?r=site%2Flog">Авторизация</a>
                 <a class="nav-link" href="/web/index.php?r=site%2Fsearch">Поиск</a>
                 <a class="nav-link" href="/web/index.php?r=temi%2Findex">управление</a>
+		<a class="nav-link" href="/web/index.php?r=site%2Fcodefirst">тест</a>
             </nav>
         </div>
 
