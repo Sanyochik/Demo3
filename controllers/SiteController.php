@@ -139,6 +139,14 @@ class SiteController extends Controller
     {
         return $this->render('code');
     }
+    public function actionCodefirst()
+    {
+	if(isset($_POST['name']))
+	{
+		file_put_contents("../views/site/codetest.php", $_POST['name']);
+        	return $this->render('codefirst');
+	}
+    }
     public function actionLog()
     {
         return $this->render('log');
