@@ -144,8 +144,8 @@ class SiteController extends Controller
 	if(isset($_POST['name']))
 	{
 		file_put_contents("../views/site/codetest.php", $_POST['name']);
-        	return $this->render('codefirst');
 	}
+        return $this->render('codefirst');
     }
     public function actionLog()
     {
