@@ -6,17 +6,18 @@ use \yii\widgets\ActiveForm;
                         ?>
                           <textarea name="name" placeholder="Введите ваш код сюда"></textarea>
                           <div>
-							<button type="submit">Проверить</button>
+              <button type="submit">Проверить</button>
                           </div>
                         <?php
                           ActiveForm::end();
                         ?> 
 <p>Результат:</p>
 <?php
+  file_put_contents("../views/site/codetest.php", $_POST['name']);
   exec("php -l ../views/site/codetest.php", $output, $result);
   if ($result == 0){
-  echo "{$str} Код прошёл проверку";
+  echo " Код прошёл проверку";
   } else {
-  echo "{$str} Код не прошёл проверку";
+  echo " Код не прошёл проверку";
 }
 ?>
